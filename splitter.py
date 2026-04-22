@@ -1,7 +1,15 @@
 splits = {
-    'checking': 0.25,
-    'truck': 0.35,
-    'investing': 0.20,
-    'marriage': 0.15,
-    'travel': 0.05
+    'Checking': 0.25,
+    'Truck': 0.35,
+    'Investing': 0.20,
+    'Marriage': 0.15,
+    'Travel': 0.05
 }
+
+paycheck = float(input("Enter the amount to split: $"))
+
+print("\n--- Paycheck Breakdown ---\n")
+
+for category, percent in splits.items():
+    amount = paycheck * percent
+    print(f'{category}: ${amount:.2f}')
